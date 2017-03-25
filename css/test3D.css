@@ -127,7 +127,7 @@ h1{
       position:relative;
       width:100%;
       height:100%;
-      border:1rem dashed #000;
+     
       transform-style:preserve-3d;
       -moz-transform-style:preserve-3d;
       -webkit-transform-style:preserve-3d;
@@ -154,13 +154,13 @@ h1{
 .box1{
     height: 100%;
     width: 100%;
-    transform:translateZ(-300rem);
+    -webkit-transform:translateZ(-300rem);
 }
 
 .box2{
     background-color: antiquewhite;
     
-    transform:translateZ(-300rem)  translate3d(45rem,0,-25.98rem) rotateY(60deg);
+   -webkit- transform:translateZ(-300rem)  translate3d(45rem,0,-25.98rem) rotateY(60deg);
     font-size: 10rem;
 }
 .box3{
@@ -168,26 +168,26 @@ h1{
     background-color: rgba(208, 150, 74, 0.66);
    
     
-    transform:translateZ(-300rem)
+    -webkit-transform:translateZ(-300rem)
        translate3d(45rem,0,-77.94rem) rotateY(120deg);;
 }
 .box4{
     font-size: 10rem;
     background-color: rgba(79, 208, 74, 0.53);
     
-  transform:translateZ(-300rem)  translate3d(0,0,-103.92rem) rotateY(180deg);
+  -webkit-transform:translateZ(-300rem)  translate3d(0,0,-103.92rem) rotateY(180deg);
 }
 .box5{
     font-size: 10rem;
     background-color: rgba(208, 141, 74, 0.71);
     
-  transform:translateZ(-300rem)  translate3d(-45rem,0,-77.94rem) rotateY(-120deg);
+  -webkit-transform:translateZ(-300rem)  translate3d(-45rem,0,-77.94rem) rotateY(-120deg);
 }
 .box6{
     font-size: 10rem;
     background-color: rgba(74, 208, 208, 0.62);
    
-  transform:translateZ(-300rem) translate3d(-45rem,0,-25.98rem) rotateY(-60deg);
+  -webkit-transform:translateZ(-300rem) translate3d(-45rem,0,-25.98rem) rotateY(-60deg);
 }
 
 

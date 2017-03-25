@@ -48,23 +48,23 @@ transform:translateX(100%) translateY(50%);
 .box2{
     background:rgba(255,255,0,.2);
     transform-origin:left top;
-    transform:translateX(150px) translateY(50px) rotateY(72deg);
+    -webkit-transform:translateX(150px) translateY(50px) rotateY(72deg);
 }
 
 .box3{
     background:rgba(0,255,0,.2);
-    transform-origin:right top;
-    transform:translateY(50px) translateZ(-153.878px) rotateY(144deg);
+    -webkit-transform-origin:right top;
+    -webkit-transform:translateY(50px) translateZ(-153.878px) rotateY(144deg);
 }
 .box4{
      background:rgba(255,0,255,.2);
-    transform-origin:left top;
-    transform:translateY(50px) translateX(100px) translateZ(-153.878px) rotateY(-144deg);
+    -webkit-transform-origin:left top;
+    -webkit-transform:translateY(50px) translateX(100px) translateZ(-153.878px) rotateY(-144deg);
 }
 .box5{
     background:rgba(0,0,255,.2);
-    transform-origin:right top;
-    transform:translateY(50px) translateX(-50px) rotateY(-72deg);
+    -webkit-transform-origin:right top;
+    -webkit-transform:translateY(50px) translateX(-50px) rotateY(-72deg);
 }
 
 .space{

@@ -161,11 +161,11 @@
   }
   @-webkit-keyframes v{
       0%{
-           perspective:99900rem;
+           -webkit-perspective:99900rem;
       
       }
       10%{
-           perspective:200rem;
+          -webkit- perspective:200rem;
       
       }
 /*
@@ -177,17 +177,17 @@
       }
 */
       50%{
-           perspective:200rem;
+          -webkit- perspective:200rem;
 
       }
       80%{
-          perspective:600rem;
+          -webkit-perspective:600rem;
       }
       90%{
-          perspective:5000rem;
+          -webkit-perspective:5000rem;
       }
       100%{
-           perspective:99900rem;
+           -webkit-perspective:99900rem;
       
       }
   }

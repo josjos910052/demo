@@ -1,0 +1,146 @@
+* {
+    -webkit-box-sizing: border-box;
+   	   -moz-box-sizing: border-box;
+    	    box-sizing: border-box
+}
+html{
+    font-size: 30px;
+    height: 100%;
+    
+}
+body{
+    height: 80%;
+   
+    min-width: 20rem;
+    min-height: 80%;
+    background-image: url("../image/bg.jpg");
+    background-size: cover;
+}
+
+
+#content{
+    
+    min-height: 80%;
+    min-width: 30%;
+    text-align: center;
+    margin-top: 10%
+}
+#footer{
+    min-height: 22%;
+    text-align: center;
+    padding-top: 1.3rem;
+}
+.head {
+    position:fixed;
+    top: 0;
+    
+    width:99%;
+}
+
+.head_bg{
+    background-color: rgba(127, 255, 212, 0);
+    
+    
+}
+
+.fr_title {
+    margin-top: 15%;
+    height: 10%;
+    
+    text-align: center;
+    
+    font-size: 2rem;
+}
+
+.form_layout {
+   display:inline-block;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-right: 0;
+    border-color: red;
+    border-width: 0.3rem;
+}
+
+.formDiv {
+   
+    margin: 0 auto;
+    border: 3px #5dac5d solid;
+    
+}
+
+.fr {
+    text-align: center;
+}
+
+.form_input {
+    border-color: red;
+    border-width: 0.3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-left: 0;
+    font-size: 1rem;
+}
+
+
+.test{
+    display: inline-flex;
+  
+    padding: 0.3rem;
+}
+
+.form_border{
+    border-color: rgba(197, 232, 223, 0.01);
+    border-width: 0.01rem  ;
+    border-style: solid;
+    width: 30%;
+    min-width: 10.6rem;
+    max-width: 12.6rem;
+    display:inline-block;
+    border-radius: 1.2rem;
+     background-color: rgba(95, 204, 204, 0.29);
+    text-align: left
+}
+.input_layout{
+     border-color: rgba(25, 176, 214, 0.27);
+     border-radius:1.2rem 1.2rem 1.2rem 0;
+    border-width:0 0 0 0.1rem ;
+    width: 75.8%;
+    max-width:10.9rem;
+   
+    font-size: 1rem;
+    height: 1.8rem;
+    
+    padding-left:0.51rem;
+    background-color: rgba(187, 235, 219, 0.19);
+    background: linear-gradient(to right,rgba(187, 235, 224, 0.21),rgba(252, 252, 252, 0));
+}
+
+form span{
+    margin-left: 0.3rem;
+   
+}
+#login_Form ul li{
+    display: inline;
+}
+
+.form_btn {
+    font-size: 1rem;
+    background:radial-gradient(circle,rgba(204, 210, 235, 0.28),rgba(252, 252, 252, 0));
+    border-radius: 150%;
+    padding: 0.3rem 0.6rem;
+    border: none;
+}
+
+
+.icon_meun {
+    margin: 0.5rem;
+}
+.icon_meun:hover{
+    filter: drop-shadow(0.2rem 0.2rem 0.1rem #333);
+}
+
+.footer_bg {
+   background: linear-gradient(to top,rgba(0, 0, 0, 0.7),rgba(221, 185, 185, 0));
+   
+   color: white;
+}

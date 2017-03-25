@@ -1,0 +1,194 @@
+.go2{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go2 2.4s linear forwards ;
+  }
+.back2{
+     -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go2 2.4s linear forwards reverse;
+}
+.go3{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go3 2.4s linear forwards ;
+  }
+.back3{
+     -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go3 2.4s linear forwards reverse;
+}
+.go4{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go4 2.4s linear forwards ;
+  }
+.back4{
+     -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go4 2.4s linear forwards reverse;
+}
+.go5{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go5 2.4s linear forwards ;
+  }
+.back5{
+     -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go5 2.4s linear forwards reverse;
+}
+.go6{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go6 2.4s linear forwards ;
+  }
+.back6{
+     -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:go6 2.4s linear forwards reverse;
+}
+
+
+
+  @-webkit-keyframes go3{
+      0%{
+          -webkit-transform:rotateX(0deg)  rotateY(0);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg)  rotateY(0deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg)  rotateY(-60deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg)  rotateY(-120deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg) rotateY(-120deg);
+      }
+  }
+  @-webkit-keyframes go2{
+      0%{
+          -webkit-transform:rotateX(0deg)  rotateY(0);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg)  rotateY(0deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg)  rotateY(-30deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg)  rotateY(-60deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg) rotateY(-60deg);
+      }
+  }
+
+  @-webkit-keyframes go4{
+      0%{
+          -webkit-transform:rotateX(0deg)  rotateY(0);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg)  rotateY(0deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg)  rotateY(-90deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg)  rotateY(-180deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg) rotateY(-180deg);
+      }
+  }
+
+  @-webkit-keyframes go5{
+      0%{
+          -webkit-transform:rotateX(0deg)  rotateY(0);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg)  rotateY(0deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg)  rotateY(60deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg)  rotateY(120deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg) rotateY(120deg);
+      }
+  }
+
+  @-webkit-keyframes go6{
+      0%{
+          -webkit-transform:rotateX(0deg)  rotateY(0);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg)  rotateY(0deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg)  rotateY(30deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg)  rotateY(60deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg) rotateY(60deg);
+      }
+  }
+
+
+
+
+.long{
+
+      -webkit-animation:v 3s linear forwards ;
+    
+    
+  }
+  @-webkit-keyframes v{
+      0%{
+           perspective:99900rem;
+      
+      }
+      10%{
+           perspective:200rem;
+      
+      }
+/*
+      20%{
+          perspective:5000rem;
+      }
+      30%{
+          perspective:1000rem;
+      }
+*/
+      50%{
+           perspective:200rem;
+
+      }
+      80%{
+          perspective:600rem;
+      }
+      90%{
+          perspective:5000rem;
+      }
+      100%{
+           perspective:99900rem;
+      
+      }
+  }
+

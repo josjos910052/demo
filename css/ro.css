@@ -168,18 +168,22 @@
           -webkit-perspective:200rem;
       
       }
-/*
+
       20%{
-          perspective:5000rem;
+          -webkit-perspective:150rem;
       }
+/*
       30%{
           perspective:1000rem;
       }
 */
       50%{
-          -webkit-perspective:200rem;
+          -webkit-perspective:150rem;
 
       }
+      55%{
+           -webkit-perspective:270rem;
+       }
       80%{
           -webkit-perspective:600rem;
       }

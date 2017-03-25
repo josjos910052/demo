@@ -2,56 +2,56 @@
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go2 2.4s linear forwards ;
+      -webkit-animation:go2 0.8s linear forwards ;
   }
 .back2{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go2 2.4s linear forwards reverse;
+      -webkit-animation:go2 0.8s linear forwards reverse;
 }
 .go3{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go3 2.4s linear forwards ;
+      -webkit-animation:go3 0.8s linear forwards ;
   }
 .back3{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go3 2.4s linear forwards reverse;
+      -webkit-animation:go3 0.8s linear forwards reverse;
 }
 .go4{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go4 2.4s linear forwards ;
+      -webkit-animation:go4 0.8s linear forwards ;
   }
 .back4{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go4 2.4s linear forwards reverse;
+      -webkit-animation:go4 0.8s linear forwards reverse;
 }
 .go5{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go5 2.4s linear forwards ;
+      -webkit-animation:go5 0.8s linear forwards ;
   }
 .back5{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go5 2.4s linear forwards reverse;
+      -webkit-animation:go5 0.8s linear forwards reverse;
 }
 .go6{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go6 2.4s linear forwards ;
+      -webkit-animation:go6 0.8s linear forwards ;
   }
 .back6{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go6 2.4s linear forwards reverse;
+      -webkit-animation:go6 0.8s linear forwards reverse;
 }
 
 
@@ -155,7 +155,7 @@
 
 .long{
 
-      -webkit-animation:v 3s linear forwards ;
+      -webkit-animation:v 1s linear forwards ;
     
     
   }

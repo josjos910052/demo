@@ -158,14 +158,14 @@ h1{
 }
 
 .box2{
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.64);
     
-   -webkit- transform:translateZ(-300rem)  translate3d(45rem,0,-25.98rem) rotateY(60deg);
+   -webkit-transform:translateZ(-300rem)  translate3d(45rem,0,-25.98rem) rotateY(60deg);
     font-size: 10rem;
 }
 .box3{
     font-size: 10rem;
-    background-color: rgba(208, 150, 74, 0.66);
+    background-color: rgba(208, 150, 74, 0.36);
    
     
     -webkit-transform:translateZ(-300rem)
@@ -173,19 +173,19 @@ h1{
 }
 .box4{
     font-size: 10rem;
-    background-color: rgba(79, 208, 74, 0.53);
+    background-color: rgba(79, 208, 74, 0.33);
     
   -webkit-transform:translateZ(-300rem)  translate3d(0,0,-103.92rem) rotateY(180deg);
 }
 .box5{
     font-size: 10rem;
-    background-color: rgba(208, 141, 74, 0.71);
+    background-color: rgba(208, 141, 74, 0.31);
     
   -webkit-transform:translateZ(-300rem)  translate3d(-45rem,0,-77.94rem) rotateY(-120deg);
 }
 .box6{
     font-size: 10rem;
-    background-color: rgba(74, 208, 208, 0.62);
+    background-color: rgba(74, 208, 208, 0.32);
    
   -webkit-transform:translateZ(-300rem) translate3d(-45rem,0,-25.98rem) rotateY(-60deg);
 }

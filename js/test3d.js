@@ -135,7 +135,7 @@ function r(w){
          space.css({
         
         "-webkit-transform":"rotateY(" +nowAngle+ "deg)"}).removeClass(str);
-    },2400);    
+    },800);    
     if(camera.hasClass('long')){
         camera.removeClass('long');
         
@@ -170,7 +170,7 @@ function b(w){
          space.css({
         
         "-webkit-transform":"rotateY(" +nowAngle+ "deg)"}).removeClass(str);
-    },2400);    
+    },800);    
     if(camera.hasClass('long')){
         camera.removeClass('long');
         

@@ -2,56 +2,56 @@
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go2 2.4s linear forwards ;
+      -webkit-animation:go2 0.4s linear forwards ;
   }
 .back2{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go2 2.4s linear forwards reverse;
+      -webkit-animation:go2 0.4s linear forwards reverse;
 }
 .go3{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go3 2.4s linear forwards ;
+      -webkit-animation:go3 0.4s linear forwards ;
   }
 .back3{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go3 2.4s linear forwards reverse;
+      -webkit-animation:go3 0.4s linear forwards reverse;
 }
 .go4{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go4 2.4s linear forwards ;
+      -webkit-animation:go4 0.4s linear forwards ;
   }
 .back4{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go4 2.4s linear forwards reverse;
+      -webkit-animation:go4 0.4s linear forwards reverse;
 }
 .go5{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go5 2.4s linear forwards ;
+      -webkit-animation:go5 0.4s linear forwards ;
   }
 .back5{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go5 2.4s linear forwards reverse;
+      -webkit-animation:go5 0.4s linear forwards reverse;
 }
 .go6{
      
       -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go6 2.4s linear forwards ;
+      -webkit-animation:go6 0.4s linear forwards ;
   }
 .back6{
      -webkit-transform-origin:center  center -351.96rem;
       
-      -webkit-animation:go6 2.4s linear forwards reverse;
+      -webkit-animation:go6 0.4s linear forwards reverse;
 }
 
 
@@ -82,7 +82,7 @@
           -webkit-transform:rotateX(-5deg)  rotateY(0deg);
       }
       50%{
-          -webkit-transform:rotateX(-15deg)  rotateY(-30deg);
+          -webkit-transform:rotateX(-20deg)  rotateY(-30deg);
       }
       90%{
         -webkit-transform:rotateX(-5deg)  rotateY(-60deg);
@@ -95,7 +95,7 @@
 
   @-webkit-keyframes go4{
       0%{
-          -webkit-transform:rotateX(0deg)  rotateY(0);
+          -webkit-transform:rotateX(0deg);
       }
       10%{
           -webkit-transform:rotateX(-5deg)  rotateY(0deg);
@@ -155,7 +155,7 @@
 
 .long{
 
-      -webkit-animation:v 3s linear forwards ;
+      -webkit-animation:v 0.5s linear  ;
     
     
   }
@@ -164,31 +164,65 @@
            -webkit-perspective:99900rem;
       
       }
+      1%{
+           -webkit-perspective:250rem;
+      
+      }
       10%{
           -webkit-perspective:200rem;
       
       }
-/*
+
       20%{
-          perspective:5000rem;
+          -webkit-perspective:160rem;
       }
+/*    
       30%{
           perspective:1000rem;
       }
 */
       50%{
-          -webkit-perspective:200rem;
+          -webkit-perspective:160rem;
 
       }
       80%{
-          -webkit-perspective:600rem;
+          -webkit-perspective:200rem;
       }
-      90%{
-          -webkit-perspective:5000rem;
+      98.8%{
+          -webkit-perspective:250rem;
+      }
+      99.99%{
+          -webkit-perspective:50rem;
       }
       100%{
-           -webkit-perspective:99900rem;
+           -webkit-perspective:000rem;
       
+      }
+  }
+
+.y_view{
+     
+      -webkit-transform-origin:center  center -351.96rem;
+      
+      -webkit-animation:y 0.5s linear forwards ;
+  }
+
+  @-webkit-keyframes y{
+      0%{
+          -webkit-transform:rotateX(0deg);
+      }
+      10%{
+          -webkit-transform:rotateX(-5deg);
+      }
+      50%{
+          -webkit-transform:rotateX(-15deg);
+      }
+      90%{
+        -webkit-transform:rotateX(-5deg);
+
+      }
+      100%{
+          -webkit-transform:rotateX(0deg);
       }
   }
 

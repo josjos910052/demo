@@ -1,12 +1,16 @@
 html{
     height:100%;
     min-height: 100%;
+    
+    
 }
 body{
     height: 100%;
+    width: 100%;
     min-height: 100%;
+    
 }
-body *{
+body {
     text-align: center;
 }
 #content{
@@ -16,8 +20,10 @@ body *{
     min-height: 26.5rem;
     min-width: 34rem;
     margin-top: 2%;
+    display: inline-block;
+    max-width: 60em;
     
-    text-align: center;
+    
 }
 #content *{
     color: rgba(191, 194, 229, 0.79);
@@ -115,9 +121,7 @@ h1{
       perspective-origin:center center ;
       -moz-perspective-origin:center center;
       -webkit-perspective-origin:center 60% 0;
-      perspective:0rem;
-      -moz-perspective:0px;
-      -webkit-perspective:0px;
+     
     overflow: hidden;
     
     
@@ -144,7 +148,7 @@ h1{
     position: absolute;
     min-height: 30.8rem ;
     min-width: 34rem;
-    max-width: 80rem;
+    max-width: 60em;
     border-radius: 0.5rem;
     
     

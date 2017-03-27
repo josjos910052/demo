@@ -4,26 +4,26 @@ $(function(){
     space=$('#view'),camera=$('#content');    
     nowAngle=parseInt(space.attr('nowangle'));
     
-    
-    
-    $('#test').on('click',function(){
-        turnR60(500);
-        console.log('testop');
-        //alert('轉八');
-    });
-    
     $('.option').on('click',function(){
         var which=$(this).attr('id')[6];
-            console.log('op');
+            
          r(parseInt(which)+1);
-        $('#content').attr('nowangle',nowAngle);
+        space.attr('nowangle',nowAngle);
     });
     
      $('.goback').on('click',function(){
-        var which=$(this).attr('id')[6];
-
-         b(parseInt(which));
-         $('#content').attr('nowangle',nowAngle);
+         b();
+    });
+    $('#head_turnLeft').on('click',function(e){
+         turnL60(500);
+        e.stopPropagation();
+    });
+    $('#head_turnRight').on('click',function(e){
+        turnR60(500);
+         e.stopPropagation();
+    });
+    $('#head').on('click',function(){
+         b();
     });
     
 });
@@ -32,108 +32,81 @@ $(function(){
 
 
 function r(w){
-    
-   nowAngle%=360;
-    nowAngle-=(60*(w-1));
-//    if(w<5)
-//        nowAngle-=(60*(w-1));
-//    else{
-//        nowAngle-=(60*(w-1));
-//        //nowAngle=-nowAngle;
-//    }
-    
-    
-    var str='go'+w;
-    
-    console.log(nowAngle+'  str:'+str);
-    
-   
-    if(!camera.hasClass('long')){
-        camera.addClass('long');
-        console.log('long增加成功');
-        console.log(camera.hasClass('long'));
+    var time=500;
+    switch(w){
+        case 2:
+            turnR60(time);
+            break;
+        case 3:
+            turnR120(time);
+            break;
+        case 4:
+            turnR180(time);
+            break;
+        case 5:
+            turnL120(time);
+            break;
+        case 6:
+            turnL60(time);
+            break;
     }
-        
-   
-    space.addClass(str);
-    var t=setTimeout(function(){
-         space.css({        
-            "-webkit-transform":"rotateY(" +nowAngle+ "deg)"
-         }).removeClass(str);
-         camera.removeClass('long');
-    },500);    
-
-   
-    
 }
 
-function b(w){
-    
-    nowAngle=0;
-    
-
-//    if(w<5)//2 3 4 
-//        nowAngle+=(60*(w-1));
-//    else{// 5 6
-//        nowAngle+=(60*(w-1));
-//       // nowAngle=-nowAngle;
-//    }
-        
-    
-    
-    var str='back'+w;
-    
-    console.log(nowAngle+'  str:'+str);
-    
-   if(!camera.hasClass('long')){
-        camera.addClass('long');
-        console.log('long增加成功');
-        console.log(camera.hasClass('long'));
-    }
-    
-    
-    space.addClass(str);
-    var t=setTimeout(function(){
-         space.css({
-        
-        "-webkit-transform":"rotateY(" +nowAngle+ "deg)"}).removeClass(str);
-        camera.removeClass('long')
-    },500);    
-    
+function b(){
+    goMenu(500);    
 }
 
 function rot(start,end,time){
     //至造新元素   
-    nowAngle+=(end-start);
-    $({deg: start}).animate({deg: end},{
+    var d=(end-start);
+    $({deg: start}).animate({deg: start+(d/2)},{
         //動畫時間        
-        duration:time,
+        duration:time/2,
         step:function(now) {
+            var angle=(d/2);
+            var now2=(now-start)*15/angle;
+            if(now2>0)
+                now2=-now2;
             space.css({
-                '-webkit-transform': 'rotateY(' + now + 'deg)'
+                '-webkit-transform': 'rotateX('+now2+'deg) rotateY('+now+'deg)'
             });
         },
-        easing:'linear',
-        queue:false
+        easing:'linear'
+        
+    }).animate({deg: end},{
+        //動畫時間        
+        duration:time/2,
+        step:function(now) {
+            var angle=(d/2);
+            var now2=(now-(start+angle))*15/angle;
+            if(now2<0)
+                now2=-now2;
+            space.css({
+                '-webkit-transform': 'rotateX('+(-15+now2)+'deg) rotateY(' + now + 'deg)'
+            });
+        },
+        easing:'linear'
+        
     });
-     $('#content').attr('nowangle',nowAngle);
 }
 
 function turnR60(time){
     rot(nowAngle,nowAngle-60,time);
     addClassLong(time);
-    if(nowAngle==-180){
-        nowAngle=120;        
+    nowAngle-=60;
+    if(nowAngle<-180){
+        nowAngle+=360;
     }
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
 }
 function turnL60(time){
     addClassLong(time);
     rot(nowAngle,nowAngle+60,time);
-    if(nowAngle==120){
-        nowAngle=-180;
+    nowAngle+=60;
+    if(nowAngle>120){
+        nowAngle-=360;
     }
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
 }
 function turnR120(time){
     addClassLong(time);
@@ -142,7 +115,7 @@ function turnR120(time){
     if(nowAngle<-180){
         nowAngle+=360;
     }
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
     
 }
 function turnL120(time){
@@ -152,7 +125,7 @@ function turnL120(time){
     if(nowAngle>120){
         nowAngle-=360;
     }
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
 }
 function turnR180(time){
     addClassLong(time);
@@ -161,29 +134,27 @@ function turnR180(time){
     if(nowAngle<-180){
         nowAngle+=360;
     }
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
 }
 
 
 
 function goMenu(time){
-    
+    if(nowAngle==0)
+        return;
+    addClassLong(time);
     rot(nowAngle,0,time);
     nowAngle=0;
-    $('#content').attr('nowangle',nowAngle);
+    space.attr('nowangle',nowAngle);
 }
 
 function addClassLong(time){
     if(!camera.hasClass('long')){
         camera.addClass('long');
-        //space.addClass('y_view');
-        console.log('long增加成功');
-        console.log(camera.hasClass('long'));
     }
     
     var t=setTimeout(function(){
         camera.removeClass('long');
-        //space.removeClass('y_view');
     },time);
 }
 

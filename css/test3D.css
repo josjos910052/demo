@@ -13,6 +13,12 @@ body{
 body {
     text-align: center;
 }
+#head {
+    height: 5%;
+    width: 100%;
+    
+}
+
 #content{
     height:105%;
     min-height: 105%;
@@ -196,6 +202,18 @@ h1{
 
 
 
-
-
-
+.turn_btn {
+    position: fixed;
+    height: 5%;
+    width: 5%;
+    max-height: 3rem;
+    max-width: 3rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    z-index:1;
+    padding: 0.4rem;
+    display: inline-block;
+    top: 1rem;
+    border-radius: 50%;
+    background: rgba(167, 147, 104, 0.37);
+}

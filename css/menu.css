@@ -92,7 +92,7 @@ h1{
 
 
 .option_bg {
-    background-color: rgba(240, 248, 255, 0.33);
+    background-color: rgba(240, 248, 255, 0.9);
     box-shadow: 0.2rem 0.2rem 0.5rem 0.25rem #777f83;
 }
 .option_bg:hover{

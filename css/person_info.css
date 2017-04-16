@@ -1,0 +1,111 @@
+#info {
+    display:inline-block; 
+    height: 100%;
+    width:100%;
+    min-width: 33rem;
+    background-color: rgba(23, 23, 25, 0.81);
+    text-align: center;
+}
+
+#title {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem 0;
+    color: aliceblue;
+}
+
+#info_content{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+#info_content table{
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    width: 90%;
+}
+
+#info_content table td{
+    height: 100%;
+    width: auto;
+    border: 1px red double;
+    background-color: black;
+    color: floralwhite;
+    margin: 0;
+}
+#info_content tr input{
+    text-align: center;
+    height:100%;
+    width: 100%;
+    
+    border: none;
+    background-color:black;
+    color: floralwhite;
+    font-size: 1rem;
+}
+#state_sel{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+#state_sel label{
+    height: 100%;
+    width: 50%;
+    float: left;
+    line-height:100%;
+    margin: auto 0;
+}
+#state_sel label input{
+    height: 70%;
+    width: 30%;
+    
+    margin:auto 0;
+}
+
+
+#check{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    
+    
+    background-color: rgba(0, 0, 0, 0.54);
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+#check div{
+    height: 30%;
+    margin:35%;
+    
+    color: azure;
+    z-index: 50;
+}
+#check input{
+    float: left;
+    width: 50%;
+    background: none;
+    color: aliceblue;
+    font-size: 0.8rem;
+    
+}
+#modify{
+    width: 100%;
+}
+#modify input{
+    height: 2rem;
+    width: 20%;
+    margin: 0.5rem;
+    
+    color: aliceblue;
+    font-size: 1rem;
+    
+    background: none
+}
+

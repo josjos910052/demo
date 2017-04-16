@@ -26,6 +26,27 @@ $(function(){
          b();
     });
     
+    $('#option1').on('click',function(){
+        $('#label_cancel_personInfo').show(500);
+        $.get('個人資料.html',function(data){
+            $("#personInfo").html(data);
+        }); 
+    });
+    
+    $('#personInfo').on('click',function(e){
+        e.stopPropagation();        
+    });
+    $('#label_cancel_personInfo').on('click',function(e){
+        e.stopPropagation();
+        $('#label_cancel_personInfo').hide(300);
+    });
+    
+    $('#close').on('click',function(e){
+        $('#label_cancel_personInfo').hide(300);
+        
+        console.log('x click');
+    });
+    
 });
 
 
@@ -34,9 +55,7 @@ $(function(){
 function r(w){
     var time=500;
     switch(w){
-        case 2:
-            turnR60(time);
-            break;
+        
         case 3:
             turnR120(time);
             break;

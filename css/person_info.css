@@ -30,7 +30,7 @@
 #info_content table td{
     height: 100%;
     width: auto;
-    border: 1px red double;
+    border: 1px rgb(185, 127, 178) double;
     background-color: black;
     color: floralwhite;
     margin: 0;

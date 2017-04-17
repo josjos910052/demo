@@ -27,7 +27,7 @@ $(function(){
     });
     
     $('#option1').on('click',function(){
-        $('#label_cancel_personInfo').show(500);
+        $('#label_cancel_personInfo').stop().fadeIn(500).show(1);
         $.get('個人資料.html',function(data){
             $("#personInfo").html(data);
         }); 
@@ -38,13 +38,12 @@ $(function(){
     });
     $('#label_cancel_personInfo').on('click',function(e){
         e.stopPropagation();
-        $('#label_cancel_personInfo').hide(300);
+        $('#label_cancel_personInfo').stop().fadeOut(300).hide(1);
     });
     
     $('#close').on('click',function(e){
-        $('#label_cancel_personInfo').hide(300);
+      e.stopPropagation();  $('#label_cancel_personInfo').stop().fadeOut(300).hide(10);
         
-        console.log('x click');
     });
     
 });

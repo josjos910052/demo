@@ -7,7 +7,7 @@ $(function(){
          m($(this));
         alert($(this).val());
     });
-    $('#wt_n_month').on('click',function(){
+    $('#wt_n_monthuu').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
         alert(date);
@@ -24,7 +24,7 @@ $(function(){
         $d.val(year+'-'+month);
         m($d);
     });
-    $('#wt_p_month').on('click',function(){
+    $('#wt_p_monthuu').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
         var d=date.split(/[/-:]/);

@@ -1,6 +1,6 @@
 $(function(){
     $date=$('#wt_input_month');
-    alert($date.val());
+    
     
     m($date);
     $('#wt_input_month').change(function(){

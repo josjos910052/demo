@@ -9,7 +9,8 @@ $(function(){
     $('#wt_n_month').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
-        var d=date.split('-');
+        alert(date);
+        var d=date.split('/ , -');
         var year=d[0],month=d[1];
         month++;
         if(month==13){
@@ -19,13 +20,13 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+'-'+month);
+        $d.val(year+'/'+month);
         m($d);
     });
     $('#wt_p_month').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
-        var d=date.split('-');
+        var d=date.split('/,-');
         var year=d[0],month=d[1];
         month--;
         if(month==0){
@@ -35,7 +36,7 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+'-'+month);
+        $d.val(year+'/'+month);
         m($d);
     });
     

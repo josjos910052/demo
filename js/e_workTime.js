@@ -10,7 +10,7 @@ $(function(){
     $('wt_n_month').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
-        alert(date);
+        
         var d=date.split(/[/-:]/);
         var year=d[0],month=d[1];
         month++;

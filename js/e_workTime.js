@@ -5,6 +5,7 @@ $(function(){
     m($date);
     $('#wt_input_month').change(function(){
          m($(this));
+        alert($(this).val());
     });
     $('#wt_n_month').on('click',function(){
         var $d=$('#wt_input_month');
@@ -20,7 +21,7 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+'/'+month);
+        $d.val(year+'-'+month);
         m($d);
     });
     $('#wt_p_month').on('click',function(){
@@ -36,7 +37,7 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+'/'+month);
+        $d.val(year+'-'+month);
         m($d);
     });
     

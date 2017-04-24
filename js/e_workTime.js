@@ -1,17 +1,15 @@
 $(function(){
     $date=$('#wt_input_month');
-    
+    alert($date.val());
     
     m($date);
     $('#wt_input_month').change(function(){
          m($(this));
-        alert($(this).val());
     });
     $('#wt_n_month').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
-        
-        var d=date.split(/[/-:]/);
+        var d=date.split('-');
         var year=d[0],month=d[1];
         month++;
         if(month==13){
@@ -21,13 +19,13 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+date[4]+month);
+        $d.val(year+'-'+month);
         m($d);
     });
     $('#wt_p_month').on('click',function(){
         var $d=$('#wt_input_month');
        var date= $d.val();
-        var d=date.split(/[/-:]/);
+        var d=date.split('-');
         var year=d[0],month=d[1];
         month--;
         if(month==0){
@@ -37,7 +35,7 @@ $(function(){
         if(month<10){
             month="0"+month;
         }
-        $d.val(year+date[4]+month);
+        $d.val(year+'-'+month);
         m($d);
     });
     
@@ -109,15 +107,15 @@ function totalTime(){
     $tr.each(function(index){
         var total=0,f_total=0;
         
-       if(index!=0){
-           
-        
+        if(index!=0){
             var d=$(this).find('.date');
             d.each(function(i){
                 total+=$(this).find('span').eq(0).text();
             });
             $(this).last().find('span').eq(0).text(total);
-           }
+       }
+        
+        
     });
 }
 

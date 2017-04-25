@@ -1,10 +1,25 @@
-#info {
+#personInfo{
+    display: inline-block;
+    width: 90%; 
+    height: auto;
+    
+    margin: 0 5%;
+    box-shadow:10px 10px 40px rgba(74%, 74%, 79%, 0.5);
+    overflow: hidden;
+    border-radius: 2%;
+    border: 3px rgba(152, 152, 152, 0.47) solid;
+}
+
+#p_info {    
+    
     display:inline-block; 
     height: 100%;
     width:100%;
     background-color: rgba(23, 23, 25, 0.81);
     text-align: center;
 }
+
+
 
 #title {
     display: inline-block;
@@ -106,5 +121,17 @@
     font-size: 1rem;
     
     background: none
+}
+
+#close{
+    position:relative;
+    
+    height: 1rem;
+    width: 1rem;
+    color: aliceblue;
+}
+
+#close:hover{
+    color: #acacac;
 }
 

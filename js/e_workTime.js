@@ -1,10 +1,17 @@
 $(function(){
     $date=$('#wt_input_month');
     
-    
-    m($date);
+    make($date);
+    totalTime();
     $('#wt_input_month').change(function(){
-         m($(this));
+        make($(this));
+        
+        //讀取資料
+        
+        //計算總工時
+        totalTime();
+        
+        //圖形變化
     });
     $('#wt_n_month').on('click',function(){
         var $d=$('#wt_input_month');
@@ -20,7 +27,8 @@ $(function(){
             month="0"+month;
         }
         $d.val(year+'-'+month);
-        m($d);
+        make($d);
+        totalTime();
     });
     $('#wt_p_month').on('click',function(){
         var $d=$('#wt_input_month');
@@ -36,12 +44,15 @@ $(function(){
             month="0"+month;
         }
         $d.val(year+'-'+month);
-        m($d);
+        make($d);
+        totalTime();
     });
     
 });
 
-function m($date){
+
+//輸出月曆日期
+function make($date){
     var d=new Date(),p_d=new Date(),n_d=new Date();
     d.setTime(Date.parse($date.val()));
     p_d.setTime(Date.parse($date.val()));
@@ -84,15 +95,18 @@ function m($date){
     m_span.each(function(index){
         if(index<start_day){
             $(this).text(p_date++).css({
-                color:'rgb(124, 137, 123)'
+                backgroundColor:'rgba(107, 105, 118, 0.33)',
+                color:'rgba(124, 137, 123, 0.7)'
             });    
         }else if(index<end_date+start_day){
             $(this).text(now_date++).css({
-                color:'rgb(68, 165, 60)'
+                backgroundColor:'rgba(107, 105, 118, 0.63)',
+                color:'rgb(42, 184, 196)'
             });    
         }else{
             $(this).text(n_date++).css({
-                color:'rgb(124, 137, 123)'
+                backgroundColor:'rgba(107, 105, 118, 0.33)',
+                color:'rgba(124, 137, 123, 0.7)'
             });    
         }
         
@@ -100,21 +114,40 @@ function m($date){
     
 }
 
+
+//計算總時
 function totalTime(){
-    var $tr=$('#wt_data table tr'),
-        date=$('.date');
+    var $tr=$('#wt_data table tr');
     
     $tr.each(function(index){
-        var total=0,f_total=0;
+       if(index!=0){
+           var $result=$(this).find('td').last(),
+               $date=$(this).find('.date');
+           
+           var total_normal=$result.find('span').eq(0),
+               total_overTime=$result.find('span').eq(1);
+           var NTime=0,
+               OTime=0;
+           $date.each(function(i){
+              var $span=$(this).find('span');
+               var normal=$span.eq(1).text(),
+                   overTime=$span.eq(2).text();
+               
+               if(normal.length>0){
+                   NTime+=parseInt(normal);
+               }
+               if(overTime.length>0){
+                   OTime+=parseInt(overTime);
+               }
+               
+               
+           });
+           total_normal.text(NTime);
+           total_overTime.text(OTime);
+           NTime=0,
+           OTime=0;
+       }
         
-       if(index==0)
-           continue;
-        
-        var d=$(this).find('.date');
-        d.each(function(i){
-            total+=$(this).find('span').eq(0).text();
-        });
-        $(this).last().find('span').eq(0).text(total);
     });
 }
 

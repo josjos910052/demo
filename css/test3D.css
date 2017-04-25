@@ -34,9 +34,10 @@ body{
     
     
 }
-#content *{
+#box1 *{
     color: rgba(191, 194, 229, 0.79);
 }
+
 #footer{
     min-height: 4rem;
     height: 9%;
@@ -177,7 +178,7 @@ h1{
 }
 .box4{
     font-size: 1rem;
-    background-color: rgba(79, 208, 74, 0.73);
+    background-color: rgba(71, 75, 71, 0.73);
     
   -webkit-transform:translateZ(-300rem)  translate3d(0,0,-103.92rem) rotateY(180deg);
 }
@@ -224,19 +225,19 @@ h1{
 }
 
 
-#p_info{
+#info{
     display: inline-block;
     width: auto;
     max-width:100%; 
+    min-width: 50%;
     height: 70%;
     
-    min-width: 50%;
     
     border-radius: 2%;
     text-align: center;
     overflow-x: hidden;
     overflow-y:auto;
-    margin-top: 5%;
+    margin-top:5%;
 }
 #personInfo{
     display: inline-block;
@@ -250,15 +251,4 @@ h1{
     border: 3px rgba(152, 152, 152, 0.47) solid;
     
 }
-#close{
-    position: relative;
-    top: 7%;
-    left:6%;
-    height: 1rem;
-    width: 1rem;
-    color: aliceblue;
-}
 
-#close:hover{
-    color: #acacac;
-}

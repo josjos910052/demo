@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>個人資料原生</title>
-    <link rel="stylesheet" type="text/css" href="css/person_info.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-    <script src="js/person_info.js"></script>
-</head>
-<body>
-    <div id='info'>
+<!--
+   此為 讓主選單 include 的網頁
+    
+         -->
+<div id='personInfo'>    
+    <div id='p_info'>
+       <div id='close'>X</div>
         <div id='title'>
             <h1>個人訊息</h1>
         </div>
@@ -20,21 +16,21 @@
                 <tr>
                     <td>員工編號</td>
                     <td colspan='2'>
-                        <input type="text" value='00000' disabled='true'>
+                        <input id='id' type="text" value='00000' disabled='true'>
                     </td>
                 </tr>
                 
                 <tr>
                     <td>姓名</td>
                     <td colspan='2'> 
-                        <input type="text" value='王小明' disabled='true'>
+                        <input id='name' type="text" value='王小明' disabled='true'>
                     </td>    
                 </tr>
                 
                 <tr>
                     <td>EMAIL</td>
                     <td colspan='2'>
-                        <input type='email' value='abc@abcdabcabcabc.com' disabled='true'>
+                        <input id='email' type='email' value='abc@abcdabcabcabc.com' disabled='true'>
                     
                     </td>
                 </tr>
@@ -44,7 +40,7 @@
                         主管
                     </td>
                     <td colspan='2'>
-                        <input type="text" value='someone' disabled='true'>
+                        <input id='manager' type="text" value='someone' disabled='true'>
                     </td>
                 </tr>
                 
@@ -68,7 +64,6 @@
                       
                        <span id='state_result' isGone='true'>離職</span>
                    </td>
-                    
                 </tr>
                 
                 <!--在職不顯示          -->
@@ -95,11 +90,7 @@
             </label>
             
            </form> 
-        </div>
+        </div>   
         
-        
-        
-        
-    </div>
-</body>
-</html>
+    </div>                
+</div>    

@@ -1,7 +1,9 @@
 $(function(){
     $allInput=$('#info_content tr input:disabled');
     $btn_modify=$('#btn_modify');
-    state()
+    
+    state();
+    
     $btn_modify.on('click',function(){
         $allInput.each(function(){
             $(this).attr('disabled',false);
@@ -15,10 +17,16 @@ $(function(){
         $('#state_sel').show();
         $('#state_result').hide();
         
-        $btn_ok="<input id='ok' type='button' value='提交'>";
-        $btn_reset="<input id='reset' type='reset' value='重設'>";
         
-        $(this).after($btn_reset).after($btn_ok).hide();
+        if($('#ok').length==0){
+             $btn_ok="<input id='ok' type='button' value='提交'>";
+             $btn_reset="<input id='reset' type='reset' value='重設'>";
+
+             $(this).after($btn_reset).after($btn_ok).hide();
+        }
+       
+        
+        
         $('#no').show();
         
         $('#ok').on('click',function(){
@@ -54,6 +62,25 @@ $(function(){
     $('#div_cancel').on('click',function(e){
         e.stopPropagation();        
     });
+    
+    
+    
+    $('#p_info').on('click',function(e){
+        e.stopPropagation();        
+    });
+  
+    $('#label_cancel_personInfo').on('click',function(e){
+        e.stopPropagation();
+        $('#label_cancel_personInfo, #personInfo').stop().fadeOut(500).hide(1);
+    });
+    
+    $('#close').on('click',function(e){
+       e.stopPropagation(); $('#label_cancel_personInfo ,#personInfo').stop().fadeOut(500).hide(1);
+        
+    });
+    
+    
+    
 });
 
 function state(){
@@ -68,5 +95,23 @@ function state(){
     }
     
     
+}
+
+function getPersonInfo(id){
+	var url="PersonInfo.do?id="+id;
+    $.ajax({
+       type:"get",
+        url: url+"",
+        success: function(data) {
+        	var info=JSON.parse(data);
+        	alert("name: "+info.name+"state: "+info.state);
+        	$('#name').val(info.name);
+        	$('#state_result').html(info.state);
+          },
+          error: function() {
+             alert('ajax錯誤');
+          }
+        
+    });
 }
 

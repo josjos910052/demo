@@ -12,7 +12,7 @@ $(function(){
     });
     
      $('.goback').on('click',function(){
-         b();
+        b();
     });
     $('#head_turnLeft').on('click',function(e){
          turnL60(500);
@@ -26,25 +26,40 @@ $(function(){
          b();
     });
     
-    $('#option1').on('click',function(){
-        $('#label_cancel_personInfo').stop().fadeIn(500).show(1);
-        $.get('個人資料.html',function(data){
-            $("#personInfo").html(data);
-        }); 
+    
+    //個人訊息
+    $('#option1').on('click',function(e){
+       $('#label_cancel_personInfo').stop().fadeIn(500).show(1); 
+        $('#personInfo').stop().show();
+        if($('#p_info').length==0){
+            
+             $.get('個人資料.html',function(data){
+                 $("#info").html(data);
+            });
+             $('head').append( $('<link rel="stylesheet" type="text/css" href="css/person_info.css">'));
+        }
+       // getPersonInfo("abc");
+        $.getScript('js/person_info.js');
     });
     
-    $('#personInfo').on('click',function(e){
-        e.stopPropagation();        
-    });
-    $('#label_cancel_personInfo').on('click',function(e){
-        e.stopPropagation();
-        $('#label_cancel_personInfo').stop().fadeOut(300).hide(1);
-    });
-    
-    $('#close').on('click',function(e){
-      e.stopPropagation();  $('#label_cancel_personInfo').stop().fadeOut(300).hide(10);
+    //查詢工時
+    $('#option3').on('click',function(){
+        
+        
+        //找不到，代表第一次，寫進
+        if($('#worktime').length==0){
+            $.get('查詢工時.html',function(data){
+                 $("#box4").html(data);
+            });
+            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_worktime.css">'));
+            $.getScript('js/e_worktime.js');
+        }
+        turnR180(500);
         
     });
+    
+    
+    
     
 });
 
@@ -58,9 +73,7 @@ function r(w){
         case 3:
             turnR120(time);
             break;
-        case 4:
-            turnR180(time);
-            break;
+        
         case 5:
             turnL120(time);
             break;
@@ -175,8 +188,6 @@ function addClassLong(time){
         camera.removeClass('long');
     },time);
 }
-
-
 
 
 

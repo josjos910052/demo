@@ -129,16 +129,21 @@ function totalTime(){
            var NTime=0,
                OTime=0;
            $date.each(function(i){
-              var $span=$(this).find('span');
-               var normal=$span.eq(1).text(),
-                   overTime=$span.eq(2).text();
-               
-               if(normal.length>0){
-                   NTime+=parseInt(normal);
+              var $label=$(this).find('label');
+               var normal=$label.eq(1).find('span').text(),
+               overTime=$label.eq(2).find('span').text();
+              
+               if(normal.length==0){
+                   normal=0;
                }
-               if(overTime.length>0){
-                   OTime+=parseInt(overTime);
+               if(overTime.length==0){
+                   overTime=0;
                }
+                
+               NTime+=parseInt(normal);
+               OTime+=parseInt(overTime);
+                             
+               timeColor($(this),normal,overTime);
                
                
            });
@@ -150,3 +155,33 @@ function totalTime(){
         
     });
 }
+
+//每日工時圖案&文字
+function timeColor($date,normal,overTime){
+    var $label=$date.find('label');
+    
+    var day_totalTime=parseInt(normal)+parseInt(overTime);
+    
+    if(parseInt(normal)!=0){                       
+        $label.eq(1).show();   
+        $label.eq(3).show();
+    }else{    
+        $label.eq(1).hide();
+        $label.eq(3).hide();
+    }
+    
+    if(parseInt(overTime)!=0){  
+        $label.eq(2).show();
+        if(parseInt(normal)!=0){
+            $date
+        }
+    }else{                     
+        $label.eq(2).hide();                  
+    }
+    
+    $label.eq(0).css({          
+        height: (day_totalTime/12*75)+'%'              
+    });   
+    
+}
+

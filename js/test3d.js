@@ -47,10 +47,10 @@ $(function(){
             $.get('查詢工時.html',function(data){
                  $("#box4").html(data);
             });
-            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_worktime.css">'));
+            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_workTime.css">'));
             
         }
-        $.getScript('js/e_worktime.js');
+        $.getScript('js/e_workTime.js');
         turnR180(500);
         
     });

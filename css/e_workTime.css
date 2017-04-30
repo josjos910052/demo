@@ -121,7 +121,7 @@ height: 3rem;
     z-index: -1;
     
     background: -webkit-linear-gradient(to top, rgba(255, 0, 0, 0) , rgba(0, 255, 235, 0.79),rgba(0, 128, 0, 0.12));
-    background: linear-gradient(to top, rgba(56, 12, 100, 0.5) 48%, rgba(138, 17, 160, 0.5) );
+    background: linear-gradient(to top, rgba(56, 12, 100, 0.1) 48%, rgba(138, 17, 160, 0.1) );
     
 }
 .b{

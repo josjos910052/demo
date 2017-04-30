@@ -4,12 +4,7 @@ $(function(){
     space=$('#view'),camera=$('#content');    
     nowAngle=parseInt(space.attr('nowangle'));
     
-    $('.option').on('click',function(){
-        var which=$(this).attr('id')[6];
-            
-         r(parseInt(which)+1);
-        space.attr('nowangle',nowAngle);
-    });
+
     
      $('.goback').on('click',function(){
         b();
@@ -39,6 +34,7 @@ $(function(){
              $('head').append( $('<link rel="stylesheet" type="text/css" href="css/person_info.css">'));
         }
        // getPersonInfo("abc");
+        
         $.getScript('js/person_info.js');
     });
     
@@ -51,14 +47,51 @@ $(function(){
             $.get('查詢工時.html',function(data){
                  $("#box4").html(data);
             });
-            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_workTime.css">'));
-            $.getScript('js/e_workTime.js');
+            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_worktime.css">'));
+            
         }
+        $.getScript('js/e_worktime.js');
         turnR180(500);
         
     });
     
+    //假日維護
+    $('#option5').on('click',function(){
+        
+        
+        //找不到，代表第一次，寫進
+        if($('#holiday').length==0){
+            $.get('假日管理.html',function(data){
+                 $("#box3").html(data);
+            });
+            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/holiday.css">'));
+            $.getScript('js/holiday.js');
+        }
+        turnR120(500);
+        
+    });
     
+    //員工管理
+    $('#option8').on('click',function(){
+        console.log('123');
+        
+        //找不到，代表第一次，寫進
+        if($('#e_manage').length==0){
+            $.get('員工管理.html',function(data){
+                 $("#box5").html(data);
+            });
+            $('head').append( $('<link rel="stylesheet" type="text/css" href="css/e_manage.css">'));
+            $.getScript('js/e_manage.js');
+        }
+        turnL120(500);
+        
+    });
+    
+    $('#title,#main_menu').hover(function(){
+        $('#main_menu').stop().animate({top:0},300);
+    },function(){
+        $('#main_menu').stop().animate({top:-3+'rem'},300);
+    });
     
     
 });
@@ -66,22 +99,8 @@ $(function(){
 
 
 
-function r(w){
-    var time=500;
-    switch(w){
-        
-        case 3:
-            turnR120(time);
-            break;
-        
-        case 5:
-            turnL120(time);
-            break;
-        case 6:
-            turnL60(time);
-            break;
-    }
-}
+
+
 
 function b(){
     goMenu(500);    
@@ -188,3 +207,7 @@ function addClassLong(time){
         camera.removeClass('long');
     },time);
 }
+
+
+
+

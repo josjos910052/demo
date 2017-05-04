@@ -58,29 +58,12 @@
 #y_hd_input_div{
     display: inline-block;
     width: 45%;
-    height: 3rem;
+    height: auto;
+    color: aliceblue
 }
-#y_hd_rd_normal,#y_hd_rd_holiday{
-    height: 1rem;
-    width: 1rem;
-    cursor: pointer;
-}
-#y_hd_input_div label{
-    color: aliceblue;
-    cursor: pointer;
-}
-#y_hd_reason{
-    display: inline-block;
-    height: 2rem;
-    width: 5rem;
-    padding:0 10px;
-    
-    font-size: 1rem;
-    border-radius: 1rem;
-    background-color: rgba(146, 149, 152, 0.66);
-    color: #e0f8f8;
-    
-}
+
+
+
 #y_hd_input_div table{
     margin: 0 auto;
     
@@ -88,21 +71,15 @@
 #y_hd_input_div td{
     min-width: 3.5rem;
 }
-#y_hd_submit{
-    display: inline-block;
-    height:1.3rem;
-    width: 50%;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: rgba(149, 165, 180, 0.83);
-    font-size: 1rem;
-    color: aliceblue;
-    
-}
+
+
+
+
 .y_hd_holiday{
     background-color: rgba(229, 154, 154, 0.42) !important;
 }
 .y_hd_sel{
-    border: 4px rgba(0, 177, 255, 0.67) solid;
+    border: 4px rgba(0, 177, 255, 0.67) solid!important;
 }
+
 

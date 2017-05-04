@@ -61,9 +61,7 @@ body{
     display: inline-block;  
     
 }
-#box1 *{
-    color: rgba(191, 194, 229, 0.79);
-}
+
 
 #footer{
     min-height: 4rem;
@@ -122,28 +120,68 @@ h1{
     width: 8.5rem;
     display: inline-block;
     margin: 1%;
-}
-#content_body ul li:hover{
-    height: 9.45rem;
-    width: 8.925rem;
+    transition: all 1s;
 }
 
 .option{
-    
+    position: relative;
+    display:inline-block;
     height: 100%;
     width: 100%;
     border-radius: 5%;
-    display:inline-block;
+    
+    background-color: rgba(240, 248, 255, 0.33);
+    box-shadow:0.05rem 0.05rem 0.7rem 0.2rem #777f83;
     position: relative;
+    transition: color 0.3s;
+}
+.option::before{
+    content: "";
+    position: absolute;
+    top: 6.5rem;
+    left: 20%;
 }
 
 
-.option_bg {
-    background-color: rgba(240, 248, 255, 0.33);
+.option_bg:hover{
+    color: rgba(255, 255, 255, 0.58);
     box-shadow: 0.2rem 0.2rem 0.5rem 0.25rem #777f83;
 }
-.option_bg:hover{
-    box-shadow:0.05rem 0.05rem 0.7rem 0.2rem #777f83;
+#option4::after{
+    content: "\f013";
+    position: absolute;
+    top: 3rem;
+    left: calc(50% - 0rem);
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3rem;
+    color: #e0e0e0;
+    transform: rotate(0deg);
+    text-shadow: 1px 1px 10px #000000;
+    opacity: 0;
+    transition: transform 0.5s;
+}
+#option4:hover::after{
+    opacity: 1;
+    
+    transform: rotate(160deg);
+    transition-delay: 0.2s;
+}
+#option5::after,#option8::after{
+    content: "\f040";
+    position: absolute;
+    top: 2.5rem;
+    left: calc(50% - 0rem);
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 3rem;
+    color: #000000;
+    opacity: 0;
+    
+}
+#option5:hover::after,#option8:hover::after{
+    
+    opacity: 1;
 }
 
 
@@ -282,6 +320,10 @@ h1{
 	position: absolute;
 	top: 3px;
 	left:0;
+}
+i{
+    margin: 0.5rem 0;
+    font-size: 6rem !important;
 }
 
 

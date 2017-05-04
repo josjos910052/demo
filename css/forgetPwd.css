@@ -1,0 +1,62 @@
+html{
+    height:100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 63.5rem;
+    font-size: 30px;    
+}
+body{
+    height: 100%;
+    width: 100%;
+  
+    margin: 0;
+    text-align: center;
+    background-image: url("../image/bg.jpg");
+    background-size:cover; 
+}
+#table{
+    margin-right:auto;
+    margin-left: auto;
+}
+#id{
+    height: 0.8rem;
+    vertical-align: middle;
+}
+#submit{
+    font-size: 100%;
+    width: 100%;
+}
+hr{
+    height: 0.1rem;
+}
+h1{
+    color: pink;
+}
+i{
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    color: rgba(0, 0, 0, 0.37);
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+i::after{
+    content: "回上一頁";
+    position: absolute;
+    top: 0.25rem;
+    left: 1.5rem;
+    font-size: 1rem;
+    display:inline-block;
+    height: 1rem;
+    width: 0rem;
+    overflow: hidden;
+    opacity:0;
+    transition: all 0.3s;
+}
+i:hover{
+    color:black;
+}
+i:hover::after{
+    width: 4rem;
+    opacity: 1;
+}

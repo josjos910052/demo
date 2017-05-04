@@ -6,32 +6,33 @@
     </div>
     <div id='y_hd_data'>
         <ul>
-            <li class="y_hd_data_li y_hd_holiday">星期日</li>
-            <li class="y_hd_data_li">星期一</li>
-            <li class="y_hd_data_li">星期二</li>
-            <li class="y_hd_data_li">星期三</li>
-            <li class="y_hd_data_li">星期四</li>
-            <li class="y_hd_data_li ">星期五</li>
-            <li class="y_hd_data_li y_hd_holiday">星期六</li>
+            <li class="y_hd_data_li y_hd_holiday" day='0'>星期日</li>
+            <li class="y_hd_data_li" day='1'>星期一</li>
+            <li class="y_hd_data_li" day='2'>星期二</li>
+            <li class="y_hd_data_li" day='3'>星期三</li>
+            <li class="y_hd_data_li" day='4'>星期四</li>
+            <li class="y_hd_data_li " day='5'>星期五</li>
+            <li class="y_hd_data_li y_hd_holiday" day='6'>星期六</li>
         </ul><br>
-        <div id='y_hd_input_div'>
+        <div id='y_hd_input_div' style="display:none">
            <table>
                <tr>
                    <td>
-                       <input id='y_hd_rd_normal' type="radio" name="holiday" checked><label for="y_hd_rd_normal">平日</label>
+                       <input id='y_hd_rd_normal' type="radio" name="holiday" class='hd_rd_normal' checked><label for="y_hd_rd_normal" >平日</label>
                    </td>
                    <td rowspan="2">
-                       <textarea id='y_hd_reason'></textarea>
+                       <textarea id='y_hd_reason' class="hd_reason"></textarea>
                    </td>
                </tr>
                <tr>
                    <td>
-                       <input id='y_hd_rd_holiday' type="radio" name="holiday"><label for="y_hd_rd_holiday">假日</label>
+                       <input id='y_hd_rd_holiday' type="radio" name="holiday" class="hd_rd_holiday"><label for="y_hd_rd_holiday" >假日</label>
                    </td>
                </tr>
                <tr>
                    <td colspan="2">
-                       <input id='y_hd_submit' type="button" value="修改">
+                       <input id='y_hd_submit' type="button" value="修改" class='hd_btn'>
+                       <input id='y_hd_cancel' type="button" value="取消" class='hd_btn'>
                    </td>
                </tr>
            </table>

@@ -8,7 +8,35 @@
                 </li>
         </ul>
         <div id='hd_content'>
-                    <div id="hd_normal" >
+               <div id='hd_modify_cover_div' style="display:none">
+                   <div id='hd_modify_div'>
+                       <table>
+                          <tr>
+                              <td id="hd_modify_date_span" colspan="2">4/1</td>
+                          </tr>
+                           <tr>
+                               <td>
+                                   <input id='hd_rd_normal' type="radio" name="holiday" class="hd_rd_normal" checked><label for="hd_rd_normal" class="hd_rd_normal">平日</label>
+                               </td>
+                               <td rowspan="2">
+                                   <textarea id='hd_reason' class='hd_reason'></textarea>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <input id='hd_rd_holiday' type="radio" name="holiday" class="hd_rd_holiday"><label for="hd_rd_holiday" class="hd_rd_holiday">假日</label>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td colspan="2">
+                                   <input id='hd_submit' type="button" value="修改" class="hd_btn">
+                                   <input id='hd_cancel' type="button" value="取消" class="hd_btn">
+                               </td>
+                           </tr>
+                       </table>                      
+                   </div>
+               </div>
+                <div id="hd_normal" >
                         <div id='hd_input_div'>          
                             <input id='hd_p_month' type="button" value="&lt;">
                             <input id='hd_input_month' type='month' value="2017-04">
@@ -27,49 +55,49 @@
                                 </tr>
                                 <tr>
                                     <td class="hd_day_td holiday">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p>周休</p>
                                             </td>   
                                     <td class="hd_day_td">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p></p>
                                             </td>
                                     <td class="hd_day_td">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p></p>
                                             </td>   
                                     <td class="hd_day_td">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p></p>
                                             </td>
                                     <td class="hd_day_td">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p></p>
                                             </td>   
                                     <td class="hd_day_td">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
                                                 <p></p>
                                             </td>
                                     <td class="hd_day_td holiday">
-                                              <input class='hd_modify' type="button" value="修改">
+                                              <input class='hd_modify' type="button" value="修改" style="display:none">
                                                <div class="hd_day">
                                                   <span>12</span>   
                                                </div>
@@ -79,6 +107,10 @@
                             </table>
                         </div>
                 </div>  
+                
+               
+               
+<!--                年度假日-->
                 <div id='hd_year_info' style="display:none">
                     <div id="hd_year"></div>
                 </div>

@@ -68,7 +68,30 @@
     
 }
 
-
+#hd_modify_cover_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.18);
+    z-index: 10;
+}
+#hd_modify_div{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    
+    border-radius: 1rem;
+    box-shadow: 2px 2px 10px 2px #d3cece;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.58);
+    
+}
 
 #hd_input_div{
     display: inline-block;
@@ -194,6 +217,48 @@ display: none; -webkit-appearance: none;
     cursor:pointer;
 }
 
+
+
+
+
+
+.hd_rd_normal,.hd_rd_holiday{
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+.hd_input_div label{
+    color: aliceblue;
+    cursor: pointer;
+}
+.hd_reason{
+    display: inline-block;
+    height: 2.5rem;
+    width: 6rem;
+    padding:0 10px;
+    
+    font-size: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(146, 149, 152, 0.66);
+    color: #e0f8f8;
+    
+}
+#hd_modify_div table{
+    margin: 1rem auto;
+    
+}
+
+.hd_btn{
+    display: inline-block;
+    height:1.3rem;
+    width: 40%;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgba(149, 165, 180, 0.83);
+    font-size: 1rem;
+    color: aliceblue;
+    
+}
 
 
 

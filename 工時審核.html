@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/m_worktime.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+	<script src="js/m_worktime.js"></script>
+</head>
+<body>
+    <div class='box'>
+        <div id="m_worktime">
+<!--           搜尋欄-->
+            <div id="m_wt_search_div">
+                依照
+                <select id='m_wt_search_select'>
+                    <option value="employee">員工</option>
+                    <option value="week">週別</option>
+                </select>
+                <select id='m_wt_search_em'>
+                    <option value="employee">編號</option>
+                    <option value="week">姓名</option>
+                </select>
+                <input id="m_wt_week_input" type="week" style="display:none">
+                搜尋
+                <input id='m_wt_search_input' type="search" >
+                <input id='m_wt_search_btn' type="button" value="搜尋">
+            </div>
+<!--            搜尋結果欄-->
+            <div id='m_wt_result_div'>
+               <div id="m_wt_result_title" class='m_wt_li_span'>
+                   <span>員編</span><span>姓名</span><span>工時</span><div>全選</div>
+               </div>
+                <ul id='em_result_ul'>
+                    <li class='m_wt_li_span'><span>0001</span><span>王曉明</span><span>45</span><div><input type='checkbox'></div></li>
+            
+                <li class='m_wt_li_span'><span>0002</span><span>王大頭</span><span>45</span><div><input type='checkbox'></div></li>
+                <li class='m_wt_li_span'><span>0003</span><span>阿杜</span><span>45</span><div><input type='checkbox'></div></li>
+                <li class='m_wt_li_span'><span>0004</span><span>Andy</span><span>45</span><div><input type='checkbox'></div></li>
+                <li class='m_wt_li_span'><span>0005</span><span>郭富城</span><span>45</span><div><input type='checkbox'></div></li>
+                <li class='m_wt_li_span'><span>0006</span><span>張學友</span><span>45</span><div><input type='checkbox'></li>
+                <li class='m_wt_li_span'><span>0007</span><span>劉德華</span><span>45</span><div><input type='checkbox'></div></li>
+                <li class='m_wt_li_span'><span>0008</span><span>周星馳</span><span>45</span><div><input type='checkbox'></div></li>
+        </ul>
+            </div>
+<!--            工時催繳-->
+            
+                <div id="w_wt_h_div">
+                    <ul id='after_em_result_ul'>
+            <li><span>0001</span> <span>王曉明</span></li>
+            <li><span>0002</span> <span>王大頭</span></li>
+            <li><span>0003</span> <span>阿杜</span></li>
+            <li><span>0004</span> <span>Andy</span></li>
+            <li><span>0005</span> <span>郭富城</span></li>
+            <li><span>0006</span> <span>張學友</span></li>
+            <li><span>0007</span> <span>劉德華</span></li>
+            <li><span>0008</span> <span>周星馳</span></li>
+        </ul>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>

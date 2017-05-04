@@ -50,24 +50,35 @@ $(function(){
             $('head').append( $('<link rel="stylesheet" type="text/css" href="css/y_holiday.css">'));
             $.getScript('js/y_holiday.js');
         };
+        //顯示年度假日填寫
         $('#hd_year_info').stop().fadeIn(300).show(0);
             $('#hd_content').css({
                 backgroundColor:'#777777'
         });
+        
+           //關閉年度假日填寫
+        
     });
-    $('#hd_year_info').on('click',function(){
-        if(!$('#tab1').hasClass('sel_tab')){
-            $('#tab1').addClass('sel_tab').siblings().removeClass('sel_tab');
-            
-            $('#hd_year_info').stop().fadeOut(300).hide(0);
-        }
-        $('#hd_content').css({
-                backgroundColor:'rgba(49, 56, 56, 0.78)'
+    
+    
+    //假日填寫
+    $('.hd_modify').on('click',function(){
+       var date=$(this).attr('date');
+        $('#hd_modify_cover_div').stop().fadeIn(500).show().find('#hd_modify_date_span').html(date);
+      
+        $('#hd_modify_cover_div,#hd_cancel').on('click',function(){
+             $('#hd_modify_cover_div').stop().fadeOut(500).hide(1);
         });
+        
     });
-    $('#hd_year').on('click',function(e){
+    
+    
+ 
+    
+    $('#hd_year,#hd_modify_div').on('click',function(e){
         e.stopPropagation();        
     });
+    
     
 });
 
@@ -139,10 +150,12 @@ function btn_hover($td){
     $td.hover(
         
         function(){
-            $(this).find('.hd_modify').stop().animate({right:0.1+'rem'},100);
+            $(this).find('.hd_modify').show().stop().animate({right:0.1+'rem'},100);
         },function(){
         
-            $(this).find('.hd_modify').stop().animate({right:-2.1+'rem'},300);
+            $(this).find('.hd_modify').stop().animate({right:-2.1+'rem'},300,function(){
+                 $(this).hide();
+            });
     });
 }
 
